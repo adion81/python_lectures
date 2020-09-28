@@ -153,13 +153,13 @@ Loops are a great way that we can repeat behavior in our code for as long as we 
 We use a `for loop` when we know how many times we want to loop.<br>
 <br>
 
-We can use for loops to interate through
+We can use for loops to interate through:
 
 <ul>
  <li>Range</li>
  <li>Lists</li>
  <li>Dictionaries</li>
-<ul>
+</ul>
 
 ```py
 # This will loop for ten times.
@@ -199,3 +199,37 @@ while is_adrien_cool:
 
 ## Functions
 
+Functions are blocks of code that we can package up and reuse over and over again.
+
+
+```py
+# Basic setup
+# This is how we define our functions.
+def square_root(list):
+    output = []
+    
+    for i in list:
+        output.append(list[i] * list[i])
+
+    # return statements always end a function
+    return output
+
+
+nums = [1,2,3,4]
+
+# Callig a function, This is where the code in the fuction runs.
+def square_root(nums)
+
+# we can even assign the return value of a function to another variable
+
+squares = square_root(nums)
+
+print(squares)
+# outputs [1,4,9,16]
+```
+
+***THINGS TO WATCH OUT FOR***
+<ul>
+    <li>indentation</li>
+    <li>return statements</li>
+</ul>
