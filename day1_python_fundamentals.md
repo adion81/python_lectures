@@ -148,9 +148,53 @@ Loops are a great way that we can repeat behavior in our code for as long as we 
 ***REMEMBER TO WORK SMARTER, NOT HARDER***
 <br>
 
+### For Loops
 
+We use a `for loop` when we know how many times we want to loop.<br>
+<br>
+We can use for loops to interate through:
 
+<ul>
+ <li>Range</li>
+ <li>Lists</li>
+ <li>Dictionaries</li>
+<ul>
 
+```py
+# This will loop for ten times.
+for i in range(0,10,1):
+    print(i)
+
+list = [1,2,3,4,5]
+
+#looping through a list.
+for x in range(0,len(list)):
+    print(list[x])
+
+ninja = { 'name': 'Adrien' , 'age' : 38, "is_cool": True }
+
+#looping through a dictionary.
+for n in ninja.items:
+    print(f"{key} : {val}")
+
+```
+
+### While Loops
+
+We use while loops when we want our code to do something for an unknown amount of times.<br>
+<br>
+
+```py
+
+is_adrien_cool = True
+count = 0
+
+while is_adrien_cool:
+    if count == 5:
+        is_adrien_cool = False
+    count ++
+
+```
 
 ## Functions
 
