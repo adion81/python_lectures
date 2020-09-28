@@ -152,7 +152,8 @@ Loops are a great way that we can repeat behavior in our code for as long as we 
 
 We use a `for loop` when we know how many times we want to loop.<br>
 <br>
-We can use for loops to interate through:
+
+We can use for loops to interate through
 
 <ul>
  <li>Range</li>
