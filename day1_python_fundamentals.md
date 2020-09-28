@@ -103,6 +103,7 @@ print("Hello %s" % (name))
     ninja = { 'name': 'Adrien' , 'age' : 38, "is_cool": True }
 
     ```
+    
     Helpful hint : You can find the length of a list with the `len()` method.<br>
     <br>
 
