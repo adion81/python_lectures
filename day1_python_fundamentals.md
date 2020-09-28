@@ -175,7 +175,7 @@ for x in range(0,len(list)):
 ninja = { 'name': 'Adrien' , 'age' : 38, "is_cool": True }
 
 #looping through a dictionary.
-for n in ninja.items:
+for key,val in ninja.items():
     print(f"{key} : {val}")
 
 ```
