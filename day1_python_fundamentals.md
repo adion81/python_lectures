@@ -91,30 +91,30 @@ print("Hello %s" % (name))
         <li>Dictionaries</li>
     </ol>
 
-    ```py
-
-    # Tuples are immutable composite types that act like an array in JavaScript.  But you can't reassign the values.
-    tup_banana = ("apple",3,true,(4,5))
-    
-    # Lists are equivalent to arrays in JavaScript.  They can hold any data type you want.
-    food_list = ["Gummy Bears","Pie","Nutella"]
-
-    # Dictionaries are Key Value pair types.
-    ninja = { 'name': 'Adrien' , 'age' : 38, "is_cool": True }
-
-    ```
-    
-    Helpful hint : You can find the length of a list with the `len()` method.<br>
-    <br>
-
-    ```py
-    list = [1,2,3,4,5]
-    print(len(list))
-    # prints out 5
-
-    ```
 </details>
 
+```py
+
+# Tuples are immutable composite types that act like an array in JavaScript.  But you can't reassign the values.
+tup_banana = ("apple",3,true,(4,5))
+
+# Lists are equivalent to arrays in JavaScript.  They can hold any data type you want.
+food_list = ["Gummy Bears","Pie","Nutella"]
+
+# Dictionaries are Key Value pair types.
+ninja = { 'name': 'Adrien' , 'age' : 38, "is_cool": True }
+
+```
+
+Helpful hint : You can find the length of a list with the `len()` method.<br>
+<br>
+
+```py
+list = [1,2,3,4,5]
+print(len(list))
+# prints out 5
+
+```
 
 ## Conditionals
 
