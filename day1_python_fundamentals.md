@@ -54,6 +54,25 @@ print("Hello %s" % (name))
 
 ### Primitive Data Types
 
+<details>
+    <summary>The Big 3 Primitives</summary>
+    <ol>
+        <li>Boolean</li>
+        <li>Number</li>
+        <li>String</li>
+    </ol>
+
+    ```py
+    # boolean
+    is_Cool = true
+    # numbers / integers
+    num = 10
+    # String
+    name = "Benny Bob"
+    ```
+</details>
+
+
 ### Composite Data Types
 
 ## Conditionals
