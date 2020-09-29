@@ -59,6 +59,8 @@ chris = Ninja("Chris","Chicago",4)
 print(chris)
 ```
 
+**WE MUST ALWAYS PASS IN `SELF` TO THE METHODS OF A CLASS**
+
 ### Attributes
 
 Notice that in the __init__ function, we take in parameters so that we can assign them to the attributes of the class.<br>
@@ -80,6 +82,52 @@ So if you wanted your ninja to be able to give a sweet tornado kick, then you wo
     <summary>Click for Sweet Tornado Kick</summary>
     <img src="https://github.com/adion81/python_lectures/blob/master/assets/chuck.jpg" alt="Tornado Kick" width="900px" >
 </details>
+
+## Class Associations
+
+Say that we wanted to get more specific about the belts that a ninja had.  We wanted to specify which colors each belt was.<br>
+<br>
+
+**Let's build a class for it!!!**
+<br>
+
+```py
+
+class Belt:
+    
+    def __init__(self,color,stack):
+        self.color = color
+        self.stack = stack
+    
+    def displayBelt(self):
+        return f"{self.stack} : {self.color}"
+
+
+
+class Ninja:
+   
+    def __init__(self,name,dojo):
+        self.name = name
+        self.dojo = dojo
+        self.num_of_belts = 0
+        self.web_fund = Belt(None,"Web Fund")
+    
+    def printInfo(self):
+        print(f"Name: {self.name}\nDojo Location: {self.dojo}\n# of Belts: {self.num_of_belts}\n{self.web_fund.displayBelt()}")
+
+    def getWebFund(self,color):
+        if(color == "yellow"):
+            self.num_of_belts += 1
+            self.web_fund.color = "yellow"
+        else:
+            print("Shake it off, and try again")
+
+chris = Ninja("Chris","Chicago")
+
+chris.getWebFund("yellow")
+chris.printInfo()
+
+```
 
 
 
