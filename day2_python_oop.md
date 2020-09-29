@@ -78,7 +78,7 @@ So if you wanted your ninja to be able to give a sweet tornado kick, then you wo
 
 <details>
     <summary>Click for Sweet Tornado Kick</summary>
-    <img src="https://github.com/adion81/python_lectures/blob/master/assets/chuck.jpg" alt="Tornado Kick" width="500px" >
+    <img src="https://github.com/adion81/python_lectures/blob/master/assets/chuck.jpg" alt="Tornado Kick" width="900px" >
 </details>
 
 
