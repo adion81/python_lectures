@@ -36,16 +36,51 @@ This is how we define a class in python:
 
 # A class is just a blue print of a custom object we want to create.
 class Ninja:
-    def __init__(self,name,dojo,belts):
+    # This is a constructor function that initializes the class.
+    def __init__(self,name,dojo):
+        # These are attritbutes that we assign to the class.
         self.name = name
         self.dojo = dojo
-        self.num_of_belts = belts
+        # This is how we can default our attributes.  Now every ninja starts with 0 belts.
+        self.num_of_belts = 0
     
-    def printInfo(self)"
+    # Methods are functions on a class that initiate behavior of the class
+    def printInfo(self):
         print(f"Name: {self.name}\nDojo Location: {self.dojo}\n# of Belts: {self.num_of_belts}")
 
+    def getRedBelt(self,did_pass):
+        if(did_pass):
+            self.num_of_belts += 1
+        else:
+            print("Shake it off, and try again")
 
 # Then we can create an instance of a ninja down here.
 chris = Ninja("Chris","Chicago",4)
 print(chris)
 ```
+
+### Attributes
+
+Notice that in the __init__ function, we take in parameters so that we can assign them to the attributes of the class.<br>
+<br>
+
+Attributes are the variables that hold the data about the class.  For a Ninja, it has a name, dojo location, and number of belts.<br>
+<br>
+
+
+### Methods
+
+If attributes are variable that hold data on the class, then Methods are functions that change the data on the class.  They also give the class the ability to have behviors.<br>
+<br>
+
+So if you wanted your ninja to be able to give a sweet tornado kick, then you would add a method onto the class!!!<br>
+<br>
+
+<details>
+    <summary>Click for Sweet Tornado Kick</summary>
+    <img src="https://github.com/adion81/python_lectures/blob/master/assets/chuck.jpg" alt="Tornado Kick" width="500px" >
+</details>
+
+
+
+
