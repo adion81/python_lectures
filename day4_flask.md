@@ -70,7 +70,7 @@ We can even render templates from our flask server, but first there is some setu
 The Folder structure:
 
 ```
-├ HelloWorld/
+├ hello_world/
     ├ templates/
         ├ index.html
         ├ another.html
@@ -110,4 +110,42 @@ another.html
 <!-- This weird syntax is Jinja2 and it allows us to insert data from our server -->
 <h1>{{ message }}</h1>
 ```
+
+## Static Files
+
+We can now start adding in our css, img, and other static files.
+
+Our Folder Structure:
+
+```
+├ hello_world/
+    ├ templates/
+        ├ index.html
+        ├ another.html
+    ├ static/
+        ├ stylesheets/
+            ├ style.css
+        ├ img/
+            ├ img.png
+        ├ js/
+            ├ script.js
+    ├ server.py
+```
+
+
+index.html
+
+```html
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style.css') }}">
+    <!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- linking an image -->
+    <img src="{{ url_for('static', filename='img/img.png') }}">
+</head>
+</html>
+```
+
+**AND NOW WE HAVE A WEB SERVER!!!**
 
