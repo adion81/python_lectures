@@ -91,12 +91,12 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # instead of returning a string we now return render a template or html file.
-    return render("index.html")
+    return render_template("index.html")
 
 @app.route('/another_route')
 def another_route():
     # We can even pass data from our server to our html page.
-    return render("another.html",message="Robots arise!!!")
+    return render_template("another.html",message="Robots arise!!!")
 
 if __name__=="__main__":
     app.run(debug=True)
