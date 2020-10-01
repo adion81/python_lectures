@@ -115,10 +115,10 @@ class Ninja:
     def printInfo(self):
         print(f"Name: {self.name}\nDojo Location: {self.dojo}\n# of Belts: {self.num_of_belts}\n{self.web_fund.displayBelt()}")
 
-    def getWebFund(self,color):
-        if(color == "yellow"):
+    def getWebFund(self,belt_color):
+        if(belt_color == "yellow"):
             self.num_of_belts += 1
-            self.web_fund.color = "yellow"
+            self.web_fund.color = belt_color
         else:
             print("Shake it off, and try again")
 
