@@ -9,7 +9,7 @@
 
 ## Http Response / Request Cycle
 
-<img src="https://vectr.com/adion81/c8R4t9Gpm.svg?width=500&height=280&select=c8R4t9Gpmpage0" alt="response request cycle" width="300px">
+<img src="https://vectr.com/adion81/c8R4t9Gpm.svg?width=500&height=280&select=c8R4t9Gpmpage0" alt="response request cycle" width="500px">
 <details>
     <summary>5 Common HTTP Verbs</summary>
     <ul>
@@ -77,4 +77,37 @@ The Folder structure:
     ├ server.py
 ```
 
+Now in our server file we can import `render_template`.
+
+
+server.py
+```py
+
+# We add render_template to this line!!!!
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    # instead of returning a string we now return render a template or html file.
+    return render("index.html")
+
+@app.route('/another_route')
+def another_route():
+    # We can even pass data from our server to our html page.
+    return render("another.html",message="Robots arise!!!")
+
+if __name__=="__main__":
+    app.run(debug=True)
+
+```
+
+**Take note that what you call your variables in your render method, you must call it in the html file.**
+
+another.html
+```html
+<!-- This weird syntax is Jinja2 and it allows us to insert data from our server -->
+<h1>{{ message }}</h1>
+```
 
