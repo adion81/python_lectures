@@ -38,6 +38,17 @@ For Windows(Command Prompt):
 `call py3Env/Scripts/activate`<br>
 <br>
 
+Then install Flask:
+
+make sure your Virtual Environment is on during installation
+
+`pip install Flask`<br>
+<br>
+or
+
+`pip3 install Flask`<br>
+<br>
+
 server.py
 ```py
 
