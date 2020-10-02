@@ -97,6 +97,46 @@ We must now set up routing within our project level files.  Route requests comin
 soups_on/urls.py
 
 ```py
+# remember to include the include here
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    # this is where we navigate our project to our soup app
+    path('', include('soup.urls'))
+]
+
+```
+
+We then need to create a `urls.py` within our soup app folder
+
+soup/urls.py
+
+```py
+
+# We must import path here
+from django.urls import path 
+
+# We must import our views file from soup/views.py  
+from . import views
+
+# Now we can attach each route to the specified route in our views.py
+urlpatterns = [
+    path('', views.index),	   
+]
+
+```
+
+## Views
+Views in Django is our controller file. This is where our action methods will live.
+
+soup/views.py
+
+```py
+from django.shortcuts import render
+
+def index(request):
+    return render(request,'index.html')
 
 ```
 
