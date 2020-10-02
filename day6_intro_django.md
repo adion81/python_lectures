@@ -122,7 +122,8 @@ from . import views
 
 # Now we can attach each route to the specified route in our views.py
 urlpatterns = [
-    path('', views.index),	   
+    path('', views.index),
+    path('new', views.create),	   
 ]
 
 ```
@@ -136,10 +137,20 @@ soup/views.py
 from django.shortcuts import render
 
 def index(request):
-    return render(request,'index.html')
+    # this is the way we can pass data from our server to our templates
+    context = {
+        "first_name": "Mr. Nibbles",
+        "last_name" : "McNibs"
+    }
+    # We must not forget to include it in the render method.
+    return render(request,'index.html',context)
 
+def create(request):
+    return render(request, 'new.html')
 ```
 
 ## Templates and Static Files
+
+
 
 ## POST Request && Submitting Forms
