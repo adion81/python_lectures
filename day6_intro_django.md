@@ -151,6 +151,131 @@ def create(request):
 
 ## Templates and Static Files
 
+If we look at the example code above, we use context to pass data to our html files.  Context is the dictionary that you pass, and then you can access the data by the key names.<br>
+<br>
+We must also create a templates folder.<br>
+<br>
+File Structure with Templates:
+
+```
+├ soups_on/
+    ├ soup/
+        ├ templates/
+            ├ index.html
+        ├ migrations/
+            ├ __init__.py
+        ├ __init__.py
+        ├ admin.py
+        ├ apps.py
+        ├ models.py
+        ├ tests.py
+        ├ admin.py
+        ├ views.py
+    ├ soups_on/
+        ├ _pycache_/
+        ├ __init__.py
+        ├ settings.py
+        ├ urls.py
+        ├ wsgi.py
+    ├ manage.py
+```
+
+index.html
+
+```html
+
+<h1>{{ first_name }} {{ last_name }}</h1>
+
+```
+
+For out static files like css, images, and javascript, we need to do some set up.<br>
+<br>
+
+Folder Structure with Static files:
+
+```
+├ soups_on/
+    ├ soup/
+        ├ templates/
+            ├ index.html
+        ├ static/
+            ├ css/
+                ├ style.css
+            ├ img/
+                ├ profile.png
+            ├ js/
+                ├ script.js
+        ├ migrations/
+            ├ __init__.py
+        ├ __init__.py
+        ├ admin.py
+        ├ apps.py
+        ├ models.py
+        ├ tests.py
+        ├ admin.py
+        ├ views.py
+    ├ soups_on/
+        ├ _pycache_/
+        ├ __init__.py
+        ├ settings.py
+        ├ urls.py
+        ├ wsgi.py
+    ├ manage.py
+```
+
+index.html
+
+```html
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">    
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+```
 
 
-## POST Request && Submitting Forms
+##  POST ROUTES && FORM SUMBITION
+
+Now we are going create a form so that the user of our website can send information to our server.<br>
+To do this we need to use a POST request, and we need to be able to detect that in views.py file.<br>
+<br>
+
+
+This is how we set up the form on the html.
+
+new.html
+
+```html
+
+<form action="/create" method="post">
+    <!-- We need this csrf token to prevent hackers from submitting false data. -->
+    <!-- It lets our server know that it is coming from our html page. -->
+  {% csrf_token %}
+  <label>First Name:</label>
+  <!-- The name attribute on an input tag will correspond to the key of the post dictionary that we send to our server. -->
+  <input name="first_name" type="text">
+  <label>Last Name:</label>
+  <input name="last_name" type="text">
+  <input type="submit" value="Submit"  >
+</form>
+
+```
+
+
+soup/views.py
+
+```py
+from django.shortcuts import render, redirect
+
+def create(request):
+    # This is how we detect a post request
+    if request.method == "POST":
+        # Now we pull that data from the post request dictionary!!!
+        first_name = request.POST["first_name"]
+        last_name = request.POST["last_name"]
+        # Must always redirect on a post request!!!!
+        redirect('/')
+```
