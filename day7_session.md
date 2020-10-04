@@ -46,4 +46,4 @@ index.html
 
 ***And now we are cookie people!!!***
 
-<img src="https://github.com/adion81/python_lectures/blob/master/assets/cookie.gif" alt="Cookie!!!" width="500px" > 
+<img src="https://github.com/adion81/python_lectures/blob/master/assets/cookies.gif" alt="Cookie!!!" width="500px" > 
