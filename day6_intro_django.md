@@ -237,7 +237,7 @@ index.html
 ```
 
 
-##  POST ROUTES && FORM SUMBITION
+##  POST ROUTES && FORM SUMBISSION
 
 Now we are going create a form so that the user of our website can send information to our server.<br>
 To do this we need to use a POST request, and we need to be able to detect that in views.py file.<br>
